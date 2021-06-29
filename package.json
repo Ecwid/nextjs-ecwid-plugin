@@ -1,15 +1,15 @@
 {
-    "name": "nextjs-ecwid-plugin",
+    "name": "nextjs-plugin-ecwid",
     "version": "0.1.0",
     "description": "Ecwid Ecommerce Shopping Cart is everything you need to add an online store to your site",
     "author": "Ecwid",
     "main": "./lib/index.js",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Ecwid/nextjs-ecwid-plugin.git"
+        "url": "git+https://github.com/Ecwid/nextjs-plugin-ecwid.git"
     },
     "bugs": {
-        "url": "https://github.com/Ecwid/nextjs-ecwid-plugin/issues"
+        "url": "https://github.com/Ecwid/nextjs-plugin-ecwid/issues"
     },
     "keywords": [
         "nextjs",

@@ -3,17 +3,17 @@ Powerful, easy to use ecommerce shopping cart plugin for Static Sites. Powerful,
 
 ## Installation
 
-    npm install --save nextjs-ecwid-plugin
+    npm install --save nextjs-plugin-ecwid
 
 or
 
-    yarn add nextjs-ecwid-plugin
+    yarn add nextjs-plugin-ecwid
 
 ### Usage 
 
 In a your app, use the ProductBrowser or BuyNowButton components:  
-`import { ProductBrowser } from 'nextjs-ecwid-plugin'`  
-`import { BuyNowButton } from 'nextjs-ecwid-plugin'` 
+`import { ProductBrowser } from 'nextjs-plugin-ecwid'`  
+`import { BuyNowButton } from 'nextjs-plugin-ecwid'` 
 
 ## Props
 
