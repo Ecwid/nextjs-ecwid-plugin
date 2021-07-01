@@ -1,22 +1,46 @@
 # Ecwid Ecommerce Shopping Cart
-Powerful, easy to use ecommerce shopping cart plugin for Static Sites. Powerful, easy-to-use and Gutenberg-friendly. Over 1 million sellers in 175 countries, 45 languages supported. PayPal, Stripe and 40 more payment options. Real-time shipping integrations. Selling on Instagram and Facebook.
+Powerful, easy to use ecommerce shopping cart plugin for Next.js sites. Over 1 million sellers in 175 countries, 45 languages supported. PayPal, Stripe and 40 more payment options. Real-time shipping integrations. Selling on Instagram and Facebook.
 
 ## Installation
 
-    npm install --save nextjs-plugin-ecwid
-
-or
-
-    yarn add nextjs-plugin-ecwid
+    npm install @ecwid/nextjs-ecwid-plugin
 
 ### Usage 
 
-In a your app, use the ProductBrowser or BuyNowButton components:  
-`import { ProductBrowser } from 'nextjs-plugin-ecwid'`  
-`import { BuyNowButton } from 'nextjs-plugin-ecwid'` 
+In a your app, use the ProductBrowser or BuyNowButton components.
 
-## Props
+ProductBrowser usage example:
+```javascript
+import {ProductBrowser} from 'nextjs-ecwid-plugin'
 
-|        Name        |        Type       |  Default  | 
-|--------------------|-------------------|-----------|
-|      storeId      |      ''     |   ''  |  
+export default function Store() {
+  return (
+    <>
+      <ProductBrowser
+        storeId="13433173"
+      />
+    </>
+  )
+}
+``` 
+
+Buy Now Button usage example:
+```javascript
+import {BuyNowButton} from 'nextjs-ecwid-plugin'
+
+export default function Store() {
+  return (
+    <>
+      <BuyNowButton
+        storeId="13433173"
+        productId="102852327"
+        isShowPrice={false}
+      />
+    </>
+  )
+}
+``` 
+
+## License
+
+This project is [Apache2.0](LICENSE) licensed.

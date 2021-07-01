@@ -31,15 +31,17 @@ const BuyNowButton = (props) => {
 	return (
 		<div className={"ecsp ecsp-SingleProduct-v2 ecsp-Product ecwid-SingleProduct-v2-centered ec-Product-" + props.productId} itemType="http://schema.org/Product" data-single-product-id={props.productId}>
 			<div itemType="http://schema.org/Offer" itemScope itemProp="offers">
-				<div className="ecwid-productBrowser-price ecwid-price" itemProp="price"  data-spw-price-location="button" content="18">
+				{ props.isShowPrice &&
+				<div className="ecwid-productBrowser-price ecwid-price" itemProp="price"  data-spw-price-location="button" content="">
 					<div itemProp="priceCurrency"></div>
 				</div>
+				}
 			</div>
 			<div customprop="addtobag"></div>
 		</div>
 	)
 }
 
-BuyNowButton.defaultProps = {storeId: 13433173};
+BuyNowButton.defaultProps = {storeId: 13433173, productId: 102852327, isShowPrice: true};
 
 export default BuyNowButton
