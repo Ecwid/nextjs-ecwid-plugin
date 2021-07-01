@@ -11,7 +11,7 @@ In a your app, use the ProductBrowser or BuyNowButton components.
 
 ProductBrowser usage example:
 ```javascript
-import {ProductBrowser} from 'nextjs-ecwid-plugin'
+import {ProductBrowser} from '@ecwid/nextjs-ecwid-plugin'
 
 export default function Store() {
   return (
@@ -26,7 +26,7 @@ export default function Store() {
 
 Buy Now Button usage example:
 ```javascript
-import {BuyNowButton} from 'nextjs-ecwid-plugin'
+import {BuyNowButton} from '@ecwid/nextjs-ecwid-plugin'
 
 export default function Store() {
   return (
