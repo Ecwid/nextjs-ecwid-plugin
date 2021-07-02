@@ -1,6 +1,6 @@
 {
   "name": "@ecwid/nextjs-ecwid-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Ecwid Ecommerce Shopping Cart is everything you need to add an online store to your site",
   "author": "Ecwid",
   "main": "./lib/index.js",
