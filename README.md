@@ -7,7 +7,7 @@ Powerful, easy to use ecommerce shopping cart plugin for Next.js sites. Over 1 m
 
 ### Usage 
 
-In a your app, use the ProductBrowser or BuyNowButton components.
+In your app, use the ProductBrowser or BuyNowButton components.
 
 ProductBrowser usage example:
 ```javascript
