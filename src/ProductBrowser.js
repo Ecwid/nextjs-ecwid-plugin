@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { useEffect } from 'react'
 
-const ProductBrowser = ({ storeId = 13433173 }) => {
+const ProductBrowser = ({ storeId = 13433173, views = 'views=grid(3,3) list(10) table(20)' }) => {
 
     useEffect(() => {
 
@@ -13,7 +13,7 @@ const ProductBrowser = ({ storeId = 13433173 }) => {
                 Ecwid.OnAPILoaded.add(function () {
                     if (!ecwidLoaded) {
                         ecwidLoaded = true;
-                        xProductBrowser("categoriesPerRow=3", "views=grid(3,3) list(10) table(20)", "categoryView=grid", "searchView=list", "id=ecStoreProductBrowser");
+                        xProductBrowser("categoriesPerRow=3", views, "categoryView=grid", "searchView=list", "id=ecStoreProductBrowser");
                     }
                 });
             }
