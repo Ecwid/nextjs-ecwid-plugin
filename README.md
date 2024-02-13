@@ -7,6 +7,36 @@ Powerful, easy to use ecommerce shopping cart plugin for Next.js sites. Over 1 m
 
 ### Usage 
 
+Create a wrapper for the EcwidProvider and give it your storeId as a key in the value object.
+
+```javascript
+"use client"
+import {EcwidProvider} from '@ecwid/nextjs-ecwid-plugin';
+
+export const EcwidProviderWrapper = ({ value, children }) => {
+  return (
+    <EcwidProvider value={{ storeId: process.env.NEXT_PUBLIC_ECWID_STORE_ID }}>
+      {children}
+    </EcwidProvider>
+  );
+}
+
+export default EcwidProviderWrapper;
+```
+
+Add this to your component or layout:
+
+```javascript
+<html lang="en">
+    <body>
+        <EcwidProviderWrapper>
+            {children}
+        </EcwidProviderWrapper>
+    </body>
+</html>
+
+```
+
 In your app, use the ProductBrowser or BuyNowButton components.
 
 ProductBrowser usage example:
@@ -16,9 +46,7 @@ import {ProductBrowser} from '@ecwid/nextjs-ecwid-plugin'
 export default function Store() {
   return (
     <>
-      <ProductBrowser
-        storeId="13433173"
-      />
+      <ProductBrowser />
     </>
   )
 }
@@ -32,7 +60,6 @@ export default function Store() {
   return (
     <>
       <BuyNowButton
-        storeId="13433173"
         productId="102852327"
         isShowPrice={false}
       />
