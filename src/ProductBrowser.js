@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom'
 import { useEffect, useState, useContext } from 'react'
 import {EcwidContext} from './EcwidProvider';
 
-const ProductBrowser = () => {
+const ProductBrowser = ({ views="views=grid(3,3) list(10) table(20)" }) => {
     const {ecwidLoaded, storeId} = useContext(EcwidContext);
 
     const [productInitalized, setProductInitialized] = useState(false);
@@ -13,7 +13,7 @@ const ProductBrowser = () => {
     useEffect(() => {
       if (ecwidLoaded && typeof Ecwid != 'undefined' && !productInitalized) {
         setProductInitialized(true);
-        xProductBrowser("categoriesPerRow=3", "views=grid(3,3) list(10) table(20)", "categoryView=grid", "searchView=list", "id=ecStoreProductBrowser");
+        xProductBrowser("categoriesPerRow=3", views, "categoryView=grid", "searchView=list", "id=ecStoreProductBrowser");
       }
     }, [ecwidLoaded]);
 
