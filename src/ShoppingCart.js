@@ -1,9 +1,11 @@
+"use client"
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { useEffect } from 'react'
+
+import { useEffect, useContext } from 'react'
+import {EcwidContext} from './EcwidProvider';
 
 const ShoppingCart = ({
-  storeId = 13433173,
   layout="",
   fixed=false,
   fixedPosition="",
@@ -14,27 +16,13 @@ const ShoppingCart = ({
   showBuyAnimation="true",
   icon="bag",
 }) => {
+    const {ecwidLoaded, storeId} = useContext(EcwidContext);
 
     useEffect(() => {
-
-        function init_cart() {
-            if (typeof Ecwid != 'undefined') {
-                Ecwid.init();
-            }
-        }
-
-        if (!document.getElementById('ecwid-script')) {
-            var script = document.createElement('script');
-            // script.charset = 'utf-8';
-            script.type = 'text/javascript';
-            script.src = 'https://app.ecwid.com/script.js?' + storeId + '&data_platform=nextjs';
-            script.id = 'ecwid-script';
-            script.onload = init_cart;
-            document.body.appendChild(script);
-        } else {
-            init_cart();
-        }
-    })
+      if (ecwidLoaded && typeof Ecwid != 'undefined') {
+        Ecwid.init(); 
+      }
+    }, [ecwidLoaded]);
 
     return (
       <div
