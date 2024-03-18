@@ -41,6 +41,8 @@ export default function Store() {
 }
 ``` 
 
+> Note: [Contact us](https://ecommerce-store.typeform.com/to/pZ5PYgNF?utm_source=github-plugin) if you’re a developer and need a premium Ecwid subscription for testing purposes.
+
 ## License
 
 This project is [Apache2.0](LICENSE) licensed.
