@@ -7,6 +7,8 @@ Powerful, easy to use ecommerce shopping cart plugin for Next.js sites. Over 1 m
 
 ### Usage 
 
+> Note: [Contact us](https://ecommerce-store.typeform.com/to/pZ5PYgNF?utm_source=github-plugin) if you’re a developer and need a premium Ecwid subscription for testing purposes.
+
 In your app, use the ProductBrowser or BuyNowButton components.
 
 ProductBrowser usage example:
@@ -40,8 +42,6 @@ export default function Store() {
   )
 }
 ``` 
-
-> Note: [Contact us](https://ecommerce-store.typeform.com/to/pZ5PYgNF?utm_source=github-plugin) if you’re a developer and need a premium Ecwid subscription for testing purposes.
 
 ## License
 
